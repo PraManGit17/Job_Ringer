@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobHunt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  
+
+
+
+<body class="bg-white text-gray-800">
+
+  <!-- Container -->
+
+  <div class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+
+    <header class="w-full">
+      <nav
+        class="container mx-auto px-4 py-3 flex justify-between items-center mt-2 shadow-blue-100 shadow-md border-gray-200 border-2">
+        <div><span class="text-xl font-bold text-blue-500">Job</span><span class="text-xl font-bold">Ringer</span></div>
+        <ul class="hidden md:flex gap-6 text-lg font-semibold">
+          <li><a href="#" class=" hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Home</a></li>
+          <li><a href="#" class="hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Jobs</a></li>
+          <li><a href="#" class="hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">About</a></li>
+          <li><a href="#" class="hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Services</a></li>
+          <li><a href="#" class="hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Client</a></li>
+        </ul>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Register</button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <section class="container mx-auto px-4 py-20 text-center flex flex-col gap-12">
+
+        <h1 class="text-3xl md:text-5xl font-bold mb-6">
+          Search, Apply &
+          <span class="text-blue-500">Land Yourself A Right Job</span>
+        </h1>
+
+        <p class="text-md text-gray-500 max-w-2xl mx-auto font-normal">
+          Your Future Starts Here! Explore Countless Job Opportunitites Brought You By <span
+            class="text-lg font-bold text-blue-600">JobRinger</span>
+          Itself. Jumpstart Your Carrer With The Job of Your Like!!
+        </p>
+
+        <div class="flex items-center justify-center space-x-4 ">
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-white hover:border-2 border-blue-500 hover:rounded hover:text-blue-500 hover:shadow-white shadow-md">Browse
+            Jobs</button>
+          <button
+            class="bg-white text-blue-500 border-2 border-blue-500 px-4 py-2 rounded hover:bg-blue-500 hover:rounded hover:text-white hover:shadow-blue-500 shadow-md">Post
+            Jobs</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center py-6 mt-auto">
+      <p class="text-sm text-gray-500">© 2025 JobHunt. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
+
 </html>
