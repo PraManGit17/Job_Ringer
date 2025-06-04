@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JobHunt</title>
+  <title>JobRinger</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
 
 
@@ -17,9 +18,9 @@
   <div class="min-h-screen flex flex-col">
     <!-- Navbar -->
 
-    <header class="w-full">
+    <header class="w-full bg-blue-100 flex items-center justify-center p-10">
       <nav
-        class="container mx-auto px-4 py-3 flex justify-between items-center mt-2 shadow-blue-100 shadow-md border-gray-200 border-2">
+        class="container w-[95%] mx-auto px-4 py-3 flex justify-between items-center mt-2 absolute bg-white hover:shadow-gray-600 shadow-2xl rounded">
         <div><span class="text-xl font-bold text-blue-500">Job</span><span class="text-xl font-bold">Ringer</span></div>
         <ul class="hidden md:flex gap-6 text-lg font-semibold">
           <li><a href="#" class=" hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Home</a></li>
@@ -32,8 +33,7 @@
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
+    <main class="flex-grow min-h-screen bg-blue-100 ">
       <section class="container mx-auto px-4 py-20 text-center flex flex-col gap-12">
 
         <h1 class="text-3xl md:text-5xl font-bold mb-6">
@@ -49,20 +49,254 @@
 
         <div class="flex items-center justify-center space-x-4 ">
           <button
-            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-white hover:border-2 border-blue-500 hover:rounded hover:text-blue-500 hover:shadow-white shadow-md">Browse
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-white hover:border-2 border-blue-500 hover:rounded hover:text-blue-500 hover:shadow-blue-500 shadow-md">Browse
             Jobs</button>
           <button
-            class="bg-white text-blue-500 border-2 border-blue-500 px-4 py-2 rounded hover:bg-blue-500 hover:rounded hover:text-white hover:shadow-blue-500 shadow-md">Post
+            class="bg-white text-blue-500 border-2 border-blue-500 px-4 py-3 rounded hover:bg-blue-500 hover:rounded hover:text-white hover:shadow-blue-500 shadow-md">Post
             Jobs</button>
         </div>
       </section>
     </main>
+
+
+    <!-- Second Section -->
+    <section>
+      <main
+        class="text-lg p-10 text-black shadow-md shadow-gray-400 min-h-screen flex flex-col gap-8 items-center justify-center">
+
+        <div class="flex flex-col items-center justify-center gap-6">
+          <h1 class="text-4xl font-bold text-center">
+            Get Hired By Following <span class="text-blue-500">4 Easy Steps</span>
+          </h1>
+          <h3 class="text-lg font-normal text-center text-gray-500 max-w-xl">
+            Follow Our Simple, Step-by-Step Guide to Quickly Land Your
+            <span class="text-blue-500 font-bold">Dream Job</span> and Start Your New Career Journey.
+          </h3>
+        </div>
+
+        <!-- Cards -->
+        <div class="w-full flex flex-wrap justify-center items-stretch gap-6">
+
+          <div
+            class="w-full sm:w-[45%] lg:w-[22%] px-5 py-8 flex flex-col items-center justify-center gap-4 rounded-sm shadow-lg shadow-gray-500">
+            <div class="w-max flex items-center justify-center gap-3">
+              <h1 class="text-xl font-bold">Create An Account</h1>
+            </div>
+            <p class="text-md font-sans text-gray-400 text-center">
+              <span class="text-blue-500 font-bold">Sign Up</span> with just a few clicks to unlock exclusive access to
+              a world of job opportunities and landing your dream job. It's quick, easy, and completely free.
+            </p>
+          </div>
+
+          <div
+            class="w-full sm:w-[45%] lg:w-[22%] px-5 py-8 flex flex-col items-center justify-center gap-4 rounded-sm shadow-lg shadow-gray-500">
+            <div class="w-max">
+              <h1 class="text-xl font-bold">Create An Account</h1>
+            </div>
+            <p class="text-md font-sans text-gray-400 text-center">
+              <span class="text-blue-500 font-bold">Sign Up</span> with just a few clicks to unlock exclusive access to
+              a world of job opportunities and landing your dream jaob. It's quick, easy, and completely free.
+            </p>
+          </div>
+
+          <div
+            class="w-full sm:w-[45%] lg:w-[22%] px-5 py-8 flex flex-col items-center justify-center gap-4 rounded-sm shadow-lg shadow-gray-500">
+            <div class="w-max">
+              <h1 class="text-xl font-bold">Create An Account</h1>
+            </div>
+            <p class="text-md font-sans text-gray-400 text-center">
+              <span class="text-blue-500 font-bold">Sign Up</span> with just a few clicks to unlock exclusive access to
+              a world of job opportunities and landing your dream job. It's quick, easy, and completely free.
+            </p>
+          </div>
+
+          <div
+            class="w-full sm:w-[45%] lg:w-[22%] px-5 py-8 flex flex-col items-center justify-center gap-4 rounded-sm shadow-lg shadow-gray-500">
+            <div class="w-max">
+              <h1 class="text-xl font-bold">Create An Account</h1>
+            </div>
+            <p class="text-md font-sans text-gray-400 text-center">
+              <span class="text-blue-500 font-bold">Sign Up</span> with just a few clicks to unlock exclusive access to
+              a world of job opportunities and landing your dream job. It's quick, easy, and completely free.
+            </p>
+          </div>
+        </div>
+      </main>
+    </section>
+
+
+    <section>
+      <main class="text-lg p-15 text-black min-h-screen flex flex-col gap-12 items-center justify-center">
+
+        <div class="flex flex-col items-center justify-center gap-4">
+          <h1 class="text-4xl font-bold text-center">
+            <span class="text-blue-500">Explore Countless Job</span> Options in Variety Sectors
+          </h1>
+          <h3 class="text-md font-normal text-center text-gray-600 max-w-2xl">
+            With <span class="text-blue-500 font-bold">Job</span><span
+              class="text-lg font-bold text-black">Ringer</span> Step into a thriving world of career possibilities
+            and connect with employers who value your talent, passion, and ambition.
+          </h3>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <div class="w-full flex flex-wrap justify-center items-stretch gap-3">
+
+            <!-- CARD START -->
+            <!-- <div
+              class="group category-card w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-blue-500 transition-colors duration-300 cursor-pointer"
+              onclick="openCard('IT Jobs: Explore frontend, backend, DevOps, full-stack roles and more!')">
+
+              <div class="w-max bg-blue-100 rounded flex items-center justify-center p-2 group-hover:bg-blue-500">
+                <i class="ph ph-desktop text-blue-500 text-4xl group-hover:text-white"></i>
+              </div>
+
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">IT</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-blue-500 font-bold group-hover:text-white">450+</span> Jobs
+                </p>
+              </div>
+            </div> -->
+
+                        <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-blue-500 transition-colors duration-300">
+
+              <div class="w-max bg-blue-100 rounded flex items-center justify-center p-2 group-hover:bg-blue-500 ">
+                <i class="ph ph-desktop text-blue-500 text-4xl group-hover:text-white"></i>
+              </div>
+
+
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">IT</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-blue-500 font-bold group-hover:text-white">450+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-purple-600 transition-colors duration-300">
+
+              <div class="w-max bg-purple-100 rounded flex items-center justify-center p-2 group-hover:bg-purple-600 ">
+                <i class="ph ph-figma-logo text-purple-600 text-4xl group-hover:text-white "></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">Design</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-purple-600 font-bold group-hover:text-white">500+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-green-700 transition-colors duration-300">
+
+              <div class="w-max bg-green-100 rounded flex items-center justify-center p-2 group-hover:bg-green-700 ">
+                <i class="ph ph-tag text-green-700 text-4xl group-hover:text-white"></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">Sales</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-green-700 font-bold group-hover:text-white">600+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-black transition-all duration-300">
+
+              <div class="w-max bg-black/10 rounded flex items-center justify-center p-2 group-hover:bg-black ">
+                <i class="ph ph-buildings text-black text-4xl group-hover:text-white"></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">Civil</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-black font-bold group-hover:text-white">300+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-orange-500 transition-colors duration-300">
+
+              <div class="w-max bg-orange-100 rounded flex items-center justify-center p-2 group-hover:bg-orange-500">
+                <i class="ph ph-user-switch text-orange-500 text-4xl group-hover:text-white"></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">Freelancing</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-orange-500 font-bold group-hover:text-white">700+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-yellow-500 transition-colors duration-300">
+
+              <div class="w-max bg-yellow-100 rounded flex items-center justify-center p-2 group-hover:bg-yellow-500 ">
+                <i class="ph ph-currency-circle-dollar text-yellow-500 text-4xl group-hover:text-white"></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">Finance</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-yellow-500 font-bold group-hover:text-white">450+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-gray-600 transition-colors duration-300">
+
+              <div class="w-max bg-gray-200 rounded flex items-center justify-center p-2 group-hover:bg-gray-600 ">
+                <i class="ph ph-car text-gray-600 text-4xl group-hover:text-white"></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <h1 class="text-xl font-bold">Automobile</h1>
+                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
+                  <span class="text-gray-600 font-bold group-hover:text-white">450+</span> Jobs
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-blue-800 transition-colors duration-300">
+
+              <div class="w-max rounded flex items-center justify-center p-2">
+                <i class="ph ph-sign-in text-blue-700 text-4xl group-hover:text-white"></i>
+              </div>
+              <div class="flex flex-col gap-2 group-hover:text-white">
+                <p>Over <span class="font-bold text-blue-700 group-hover:text-white">1500+</span> Jobs</p>
+                <button
+                  class="p-2 bg-blue-700 rounded-md border-2 border-white text-sm text-white font-medium group-hover:bg-white group-hover:text-blue-700">Other
+                  Opportunities</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </section>
+
+
+
+
+    <section class="text-lg p-15 text-black min-h-screen flex flex-col gap-12 items-center justify-center">
+      <main>
+
+      </main>
+    </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-100 text-center py-6 mt-auto">
       <p class="text-sm text-gray-500">© 2025 JobHunt. All rights reserved.</p>
     </footer>
   </div>
+
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>
