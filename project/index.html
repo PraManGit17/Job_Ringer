@@ -7,9 +7,8 @@
   <title>JobRinger</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 </head>
 
 
@@ -33,7 +32,10 @@
           <li><a href="#" class="hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Services</a></li>
           <li><a href="#" class="hover:text-blue-500 hover:font-semibold hover:px-3 transition-all">Client</a></li>
         </ul>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Register</button>
+        <div>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">JobSeeker Login</button>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Empolyeer Login</button>
+        </div>
       </nav>
     </header>
 
@@ -45,19 +47,19 @@
 
         <div class="flex flex-col gap-12 text-center lg:text-left">
 
-          <h1 class="text-4xl md:text-5xl font-bold mb-3 flex flex-col gap-1">
+          <h1 id="hero-title" class="text-4xl md:text-5xl font-bold mb-3 flex flex-col gap-1">
             <p>Search, Apply &</p>
-            <span class="text-blue-500">
-              Get Yourself A Dream Job!!</span>
+            <span class="text-blue-500">Get Yourself A Dream Job!!</span>
           </h1>
 
-          <p class="text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0 font-normal">
+          <p id="hero-subtext" class="text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0 font-normal">
             Your Future Starts Here! Explore Countless Job Opportunitites Brought You By
             <span class="text-lg font-bold text-blue-600">JobRinger</span>
             Itself. Jumpstart Your Carrer With The Job of Your Like!!
           </p>
 
-          <div class="flex items-center justify-center w-max p-5 lg:justify-center space-x-4 rounded-lg bg-white">
+          <div id="cta-buttons"
+            class="flex items-center justify-center w-max p-5 lg:justify-center space-x-4 rounded-lg bg-white">
 
             <div
               class="flex items-center justify-center gap-1 px-4 py-2 rounded hover:bg-blue-300 cursor-pointer transition">
@@ -89,23 +91,38 @@
         </div>
 
 
+
         <div class="w-full h-full flex flex-col items-center justify-center bg-blue-100 gap-2">
 
-          <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-start ml-4">
-            <p>Post or browse jobs easily!</p>
+          <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-start ml-4 job-message">
+            <p>JobBringer: You Got Shortlisted for this interview</p>
             <div
               class="absolute bottom-0 left-6 w-0 h-0 border-t-[10px] border-white border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent translate-y-full">
             </div>
           </div>
 
-          <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-end mr-4">
-            <p>Post or browse jobs easily!</p>
+          <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-end mr-4 job-message">
+            <p>JobBringer: Congrats! You Got Selected</p>
             <div
               class="absolute bottom-0 right-6 w-0 h-0 border-t-[10px] border-white border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent translate-y-full">
             </div>
           </div>
 
-          <img src="assets/comp.png" alt="computer" class="w-[300px] md:w-[400px]" />
+          <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-end mr-4 job-message">
+            <p>JobBringer: Your Interview is Scheduled Tomorrow at 11AM</p>
+            <div
+              class="absolute bottom-0 right-6 w-0 h-0 border-t-[10px] border-white border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent translate-y-full">
+            </div>
+          </div>
+
+          <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-start ml-4 job-message">
+            <p>JobBringer: You Have New Job Matches Waiting!</p>
+            <div
+              class="absolute bottom-0 left-6 w-0 h-0 border-t-[10px] border-white border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent translate-y-full">
+            </div>
+          </div>
+
+          <img src="assets/comp.png" alt="computer" class="w-[200px] md:w-[350px]" id="job-image" />
         </div>
 
 
@@ -114,6 +131,8 @@
 
 
     <!-- Second Section -->
+
+    <section>
       <main
         class="text-lg p-10 text-black shadow-md shadow-gray-400 min-h-screen flex flex-col gap-8 items-center justify-center">
 
@@ -127,129 +146,62 @@
           </h3>
         </div>
 
-        
-
         <div class="w-full flex flex-wrap justify-center items-stretch gap-6 px-4 py-10 bg-gray-50">
 
           <div
-            class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
               <i class="ph ph-user-circle text-blue-500 text-4xl"></i>
               <h2 class="text-lg md:text-xl font-semibold text-gray-800">Create An Account</h2>
             </div>
             <p class="text-sm text-center text-gray-600 leading-relaxed">
               <span class="text-blue-600 font-semibold">Sign Up</span> & create your account in minutes to gain
-              exclusive
-              access to a wide range of job opportunities. It’s fast, simple, and completely free.
+              exclusive access to a wide range of job opportunities. It’s fast, simple, and completely free.
             </p>
           </div>
 
-     
           <div
-            class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
               <i class="ph ph-magnifying-glass text-blue-500 text-4xl"></i>
               <h2 class="text-lg md:text-xl font-semibold text-gray-800">Search Job</h2>
             </div>
             <p class="text-sm text-center text-gray-600 leading-relaxed">
               <span class="text-blue-600 font-semibold">Explore</span> our extensive job database designed to align with
-              your
-              skills and interests. Use our tools to find tailored opportunities easily.
+              your skills and interests. Use our tools to find tailored opportunities easily.
             </p>
           </div>
 
-      
           <div
-            class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
               <i class="ph ph-file-arrow-up text-blue-500 text-4xl"></i>
               <h2 class="text-lg md:text-xl font-semibold text-gray-800">Upload Resume</h2>
             </div>
             <p class="text-sm text-center text-gray-600 leading-relaxed">
               <span class="text-blue-600 font-semibold">Highlight</span> your background by uploading your CV. Make a
-              strong
-              impression and stand out to employers.
+              strong impression and stand out to employers.
             </p>
           </div>
 
-   
           <div
-            class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
               <i class="ph ph-briefcase text-blue-500 text-4xl"></i>
               <h2 class="text-lg md:text-xl font-semibold text-gray-800">Get Job</h2>
             </div>
             <p class="text-sm text-center text-gray-600 leading-relaxed">
               Take the <span class="text-blue-600 font-semibold">decisive</span> step in your career journey. Land the
-              job
-              you've always dreamed of.
+              job you,ve always dreamed of.
             </p>
           </div>
+
         </div>
-
-
       </main>
-    </section> -->
-     <section>
-    <main class="text-lg p-10 text-black shadow-md shadow-gray-400 min-h-screen flex flex-col gap-8 items-center justify-center">
+    </section>
 
-      <div class="flex flex-col items-center justify-center gap-6">
-        <h1 class="text-4xl font-bold text-center">
-          Get Hired By Following <span class="text-blue-500">4 Easy Steps</span>
-        </h1>
-        <h3 class="text-lg font-normal text-center text-gray-500 max-w-xl">
-          Follow Our Simple, Step-by-Step Guide to Quickly Land Your
-          <span class="text-blue-500 font-bold">Dream Job</span> and Start Your New Career Journey.
-        </h3>
-      </div>
 
-      <div class="w-full flex flex-wrap justify-center items-stretch gap-6 px-4 py-10 bg-gray-50">
-
-        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center gap-3">
-            <i class="ph ph-user-circle text-blue-500 text-4xl"></i>
-            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Create An Account</h2>
-          </div>
-          <p class="text-sm text-center text-gray-600 leading-relaxed">
-            <span class="text-blue-600 font-semibold">Sign Up</span> & create your account in minutes to gain
-            exclusive access to a wide range of job opportunities. It’s fast, simple, and completely free.
-          </p>
-        </div>
-
-        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center gap-3">
-            <i class="ph ph-magnifying-glass text-blue-500 text-4xl"></i>
-            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Search Job</h2>
-          </div>
-          <p class="text-sm text-center text-gray-600 leading-relaxed">
-            <span class="text-blue-600 font-semibold">Explore</span> our extensive job database designed to align with your skills and interests. Use our tools to find tailored opportunities easily.
-          </p>
-        </div>
-
-        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center gap-3">
-            <i class="ph ph-file-arrow-up text-blue-500 text-4xl"></i>
-            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Upload Resume</h2>
-          </div>
-          <p class="text-sm text-center text-gray-600 leading-relaxed">
-            <span class="text-blue-600 font-semibold">Highlight</span> your background by uploading your CV. Make a strong impression and stand out to employers.
-          </p>
-        </div>
-
-        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center gap-3">
-            <i class="ph ph-briefcase text-blue-500 text-4xl"></i>
-            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Get Job</h2>
-          </div>
-          <p class="text-sm text-center text-gray-600 leading-relaxed">
-            Take the <span class="text-blue-600 font-semibold">decisive</span> step in your career journey. Land the job you,ve always dreamed of.
-          </p>
-        </div>
-
-      </div>
-    </main>
-  </section>
-
+    <!-- Third Section -->
     <section>
       <main class="text-lg p-14 text-black min-h-screen flex flex-col gap-12 items-center justify-center">
 
@@ -267,22 +219,7 @@
         <div class="flex flex-col gap-3">
           <div class="w-full flex flex-wrap justify-center items-stretch gap-3">
 
-            <!-- CARD START -->
-            <!-- <div
-              class="group category-card w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-blue-500 transition-colors duration-300 cursor-pointer"
-              onclick="openCard('IT Jobs: Explore frontend, backend, DevOps, full-stack roles and more!')">
 
-              <div class="w-max bg-blue-100 rounded flex items-center justify-center p-2 group-hover:bg-blue-500">
-                <i class="ph ph-desktop text-blue-500 text-4xl group-hover:text-white"></i>
-              </div>
-
-              <div class="flex flex-col gap-2 group-hover:text-white">
-                <h1 class="text-xl font-bold">IT</h1>
-                <p class="text-md font-normal text-gray-600 text-center group-hover:text-white">
-                  <span class="text-blue-500 font-bold group-hover:text-white">450+</span> Jobs
-                </p>
-              </div>
-            </div> -->
 
             <div
               class="group w-full sm:w-[45%] lg:w-[20%] px-5 py-6 flex flex-col items-start justify-center gap-5 rounded-sm shadow-lg shadow-gray-500 hover:bg-blue-500 transition-colors duration-300">
@@ -404,7 +341,7 @@
     </section>
 
 
-
+    <!-- Fourth Section -->
     <section>
       <main class="text-lg p-10 text-black min-h-screen flex flex-col gap-5 items-center justify-center">
 
@@ -420,24 +357,29 @@
           </h3>
         </div>
 
-        <div class="w-[38%] rounded-md p-2 bg-gray-100 shadow-lg shadow-gray-500 flex justify-between">
-            <div class="w-max flex items-center justify-end space-x-1 px-24 py-1 border-2 border-black/50 rounded-md">
-              <i class="ph ph-magnifying-glass text-black text-2xl"></i>
-              <span class="text-lg font-medium text-gray-500">Search Jobs</span>
-            </div>
+        <div
+          class="w-full md:w-[70%] lg:w-[38%] rounded-md p-2 bg-gray-100 shadow-lg shadow-gray-500 flex flex-col md:flex-row items-center justify-between gap-3">
 
-            <button class="p-2 rounded-md bg-blue-500 font-normal text-white">
-              Browse Jobs
-            </button>
+          <div
+            class="w-full md:w-max flex items-center justify-between md:justify-end space-x-2 px-4 md:px-6 py-2 border-2 border-black/50 rounded-md">
+            <i class="ph ph-magnifying-glass text-black text-xl md:text-2xl"></i>
+            <span class="text-base md:text-lg font-medium text-gray-500">Search Jobs</span>
+          </div>
+
+          <button class="w-full md:w-auto p-2 px-4 rounded-md bg-blue-500 font-normal text-white">
+            Browse Jobs
+          </button>
+
         </div>
+
 
         <!-- Cards Wrapper -->
         <div class="w-full flex flex-wrap justify-center items-stretch gap-4">
 
           <!-- Job Card 1 -->
           <div class="w-full sm:w-[45%] lg:w-[30%] p-4 flex flex-col gap-4 rounded-md shadow-lg shadow-gray-500">
-            
-                <div class="flex items-center justify-between">
+
+            <div class="flex items-center justify-between">
               <img src="assets/google.png" alt="google" class="w-[85px]">
               <p class="text-lg font-semibold">Google</p>
             </div>
@@ -568,13 +510,67 @@
 
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-center py-6 mt-auto">
-      <p class="text-sm text-gray-500">© 2025 JobHunt. All rights reserved.</p>
+    <footer class="bg-gray-200 text-gray-700 py-10 px-4 md:px-16">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Brand and Description -->
+        <div>
+          <h2 class="text-2xl font-bold">
+            <span class="text-blue-500">Job</span><span class="font-bold">Ringer</span>
+          </h2>
+          <p class="mt-4 text-sm text-gray-600 leading-relaxed">
+            Our platform is designed to help you find the perfect job and achieve your professional dreams.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Youtube</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-4 text-sm text-gray-600">
+            <li class="flex items-center gap-2">
+              <i class="ph ph-phone text-lg"></i> +91 234 56788
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="ph ph-map-pin text-lg mt-1"></i>
+              <span>Mumbai Suburban,<br />Bhandup, West</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="text-center pt-6 mt-6 border-t border-gray-200">
+        <p class="text-sm text-gray-500">© 2025 JobHunt. All rights reserved.</p>
+      </div>
     </footer>
-  </div>
 
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
