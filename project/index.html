@@ -7,7 +7,11 @@
   <title>JobRinger</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 
 
 
@@ -85,7 +89,7 @@
         </div>
 
 
-        <div class="w-full h-full flex flex-col items-center justify-center bg-blue-100 gap-2 border-2">
+        <div class="w-full h-full flex flex-col items-center justify-center bg-blue-100 gap-2">
 
           <div class="relative bg-white text-black px-4 py-3 rounded-md w-[65%] h-[75px] self-start ml-4">
             <p>Post or browse jobs easily!</p>
@@ -110,7 +114,6 @@
 
 
     <!-- Second Section -->
-    <section>
       <main
         class="text-lg p-10 text-black shadow-md shadow-gray-400 min-h-screen flex flex-col gap-8 items-center justify-center">
 
@@ -124,11 +127,10 @@
           </h3>
         </div>
 
-        <!-- Cards -->
+        
 
         <div class="w-full flex flex-wrap justify-center items-stretch gap-6 px-4 py-10 bg-gray-50">
 
-          <!-- Card -->
           <div
             class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
@@ -142,7 +144,7 @@
             </p>
           </div>
 
-          <!-- Card -->
+     
           <div
             class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
@@ -156,7 +158,7 @@
             </p>
           </div>
 
-          <!-- Card -->
+      
           <div
             class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
@@ -170,7 +172,7 @@
             </p>
           </div>
 
-          <!-- Card -->
+   
           <div
             class="w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-center justify-center gap-3">
@@ -180,15 +182,73 @@
             <p class="text-sm text-center text-gray-600 leading-relaxed">
               Take the <span class="text-blue-600 font-semibold">decisive</span> step in your career journey. Land the
               job
-              you’ve always dreamed of.
+              you've always dreamed of.
             </p>
           </div>
         </div>
 
 
       </main>
-    </section>
+    </section> -->
+     <section>
+    <main class="text-lg p-10 text-black shadow-md shadow-gray-400 min-h-screen flex flex-col gap-8 items-center justify-center">
 
+      <div class="flex flex-col items-center justify-center gap-6">
+        <h1 class="text-4xl font-bold text-center">
+          Get Hired By Following <span class="text-blue-500">4 Easy Steps</span>
+        </h1>
+        <h3 class="text-lg font-normal text-center text-gray-500 max-w-xl">
+          Follow Our Simple, Step-by-Step Guide to Quickly Land Your
+          <span class="text-blue-500 font-bold">Dream Job</span> and Start Your New Career Journey.
+        </h3>
+      </div>
+
+      <div class="w-full flex flex-wrap justify-center items-stretch gap-6 px-4 py-10 bg-gray-50">
+
+        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center gap-3">
+            <i class="ph ph-user-circle text-blue-500 text-4xl"></i>
+            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Create An Account</h2>
+          </div>
+          <p class="text-sm text-center text-gray-600 leading-relaxed">
+            <span class="text-blue-600 font-semibold">Sign Up</span> & create your account in minutes to gain
+            exclusive access to a wide range of job opportunities. It’s fast, simple, and completely free.
+          </p>
+        </div>
+
+        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center gap-3">
+            <i class="ph ph-magnifying-glass text-blue-500 text-4xl"></i>
+            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Search Job</h2>
+          </div>
+          <p class="text-sm text-center text-gray-600 leading-relaxed">
+            <span class="text-blue-600 font-semibold">Explore</span> our extensive job database designed to align with your skills and interests. Use our tools to find tailored opportunities easily.
+          </p>
+        </div>
+
+        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center gap-3">
+            <i class="ph ph-file-arrow-up text-blue-500 text-4xl"></i>
+            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Upload Resume</h2>
+          </div>
+          <p class="text-sm text-center text-gray-600 leading-relaxed">
+            <span class="text-blue-600 font-semibold">Highlight</span> your background by uploading your CV. Make a strong impression and stand out to employers.
+          </p>
+        </div>
+
+        <div class="step-card w-full sm:w-[45%] lg:w-[22%] bg-white px-6 py-8 flex flex-col items-center justify-start gap-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center gap-3">
+            <i class="ph ph-briefcase text-blue-500 text-4xl"></i>
+            <h2 class="text-lg md:text-xl font-semibold text-gray-800">Get Job</h2>
+          </div>
+          <p class="text-sm text-center text-gray-600 leading-relaxed">
+            Take the <span class="text-blue-600 font-semibold">decisive</span> step in your career journey. Land the job you,ve always dreamed of.
+          </p>
+        </div>
+
+      </div>
+    </main>
+  </section>
 
     <section>
       <main class="text-lg p-14 text-black min-h-screen flex flex-col gap-12 items-center justify-center">
